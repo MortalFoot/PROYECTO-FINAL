@@ -8,13 +8,15 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { HistoriaPage } from '../pages/historia/historia';
 import { DibujoPage } from '../pages/dibujo/dibujo';
+import { PyEPage } from '../pages/py-e/py-e';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     HistoriaPage,
-    DibujoPage
+    DibujoPage,
+    PyEPage
   
   ],
   imports: [
@@ -26,7 +28,8 @@ import { DibujoPage } from '../pages/dibujo/dibujo';
     MyApp,
     HomePage,
     HistoriaPage,
-    DibujoPage
+    DibujoPage,
+    PyEPage
   ],
   providers: [
     StatusBar,
