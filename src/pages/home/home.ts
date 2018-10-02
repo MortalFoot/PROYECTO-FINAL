@@ -6,6 +6,7 @@ import { PyEPage } from '../py-e/py-e';
 import { SaludPage } from '../salud/salud';
 import { PApPsPage } from '../p-ap-ps/p-ap-ps';
 import { ComPage } from '../com/com';
+import { MiPage } from '../mi/mi';
 
 @Component({
   selector: 'page-home',
@@ -18,6 +19,7 @@ PyE = PyEPage;
 Salud = SaludPage;
 PAAPS = PApPsPage;
 COM = ComPage;
+MI = MiPage
   constructor(public navCtrl: NavController) {
 
   }
@@ -44,5 +46,9 @@ COM = ComPage;
   clickCOM()
   {
     this.navCtrl.push(this.COM)
+  }
+  clickMI()
+  {
+    this.navCtrl.push(this.MI)
   }
 }

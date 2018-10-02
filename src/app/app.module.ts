@@ -12,6 +12,7 @@ import { PyEPage } from '../pages/py-e/py-e';
 import { SaludPage } from '../pages/salud/salud';
 import { PApPsPage } from '../pages/p-ap-ps/p-ap-ps';
 import { ComPage } from '../pages/com/com';
+import { MiPage } from '../pages/mi/mi';
 
 @NgModule({
   declarations: [
@@ -22,8 +23,8 @@ import { ComPage } from '../pages/com/com';
     PyEPage,
     SaludPage,
     PApPsPage,
-    ComPage
-    
+    ComPage,
+    MiPage
   
   ],
   imports: [
@@ -39,7 +40,8 @@ import { ComPage } from '../pages/com/com';
     PyEPage,
     SaludPage,
     PApPsPage,
-    ComPage
+    ComPage,
+    MiPage
     
   ],
   providers: [
