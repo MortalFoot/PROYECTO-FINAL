@@ -11,6 +11,7 @@ import { DibujoPage } from '../pages/dibujo/dibujo';
 import { PyEPage } from '../pages/py-e/py-e';
 import { SaludPage } from '../pages/salud/salud';
 import { PApPsPage } from '../pages/p-ap-ps/p-ap-ps';
+import { ComPage } from '../pages/com/com';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PApPsPage } from '../pages/p-ap-ps/p-ap-ps';
     DibujoPage,
     PyEPage,
     SaludPage,
-    PApPsPage
+    PApPsPage,
+    ComPage
     
   
   ],
@@ -36,7 +38,9 @@ import { PApPsPage } from '../pages/p-ap-ps/p-ap-ps';
     DibujoPage,
     PyEPage,
     SaludPage,
-    PApPsPage
+    PApPsPage,
+    ComPage
+    
   ],
   providers: [
     StatusBar,

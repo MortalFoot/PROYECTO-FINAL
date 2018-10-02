@@ -5,6 +5,7 @@ import { DibujoPage } from '../dibujo/dibujo';
 import { PyEPage } from '../py-e/py-e';
 import { SaludPage } from '../salud/salud';
 import { PApPsPage } from '../p-ap-ps/p-ap-ps';
+import { ComPage } from '../com/com';
 
 @Component({
   selector: 'page-home',
@@ -16,6 +17,7 @@ Dibujo = DibujoPage;
 PyE = PyEPage;
 Salud = SaludPage;
 PAAPS = PApPsPage;
+COM = ComPage;
   constructor(public navCtrl: NavController) {
 
   }
@@ -38,5 +40,9 @@ PAAPS = PApPsPage;
   clickPPAPs()
   {
     this.navCtrl.push(this.PAAPS)
+  }
+  clickCOM()
+  {
+    this.navCtrl.push(this.COM)
   }
 }
