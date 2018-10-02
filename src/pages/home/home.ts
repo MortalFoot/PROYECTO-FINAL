@@ -4,6 +4,7 @@ import { HistoriaPage } from '../historia/historia';
 import { DibujoPage } from '../dibujo/dibujo';
 import { PyEPage } from '../py-e/py-e';
 import { SaludPage } from '../salud/salud';
+import { PApPsPage } from '../p-ap-ps/p-ap-ps';
 
 @Component({
   selector: 'page-home',
@@ -14,6 +15,7 @@ Historia = HistoriaPage;
 Dibujo = DibujoPage;
 PyE = PyEPage;
 Salud = SaludPage;
+PAAPS = PApPsPage;
   constructor(public navCtrl: NavController) {
 
   }
@@ -32,5 +34,9 @@ Salud = SaludPage;
   clickSalud()
   {
     this.navCtrl.push(this.Salud)
+  }
+  clickPPAPs()
+  {
+    this.navCtrl.push(this.PAAPS)
   }
 }

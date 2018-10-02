@@ -10,6 +10,7 @@ import { HistoriaPage } from '../pages/historia/historia';
 import { DibujoPage } from '../pages/dibujo/dibujo';
 import { PyEPage } from '../pages/py-e/py-e';
 import { SaludPage } from '../pages/salud/salud';
+import { PApPsPage } from '../pages/p-ap-ps/p-ap-ps';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { SaludPage } from '../pages/salud/salud';
     HistoriaPage,
     DibujoPage,
     PyEPage,
-    SaludPage
+    SaludPage,
+    PApPsPage
+    
   
   ],
   imports: [
@@ -32,7 +35,8 @@ import { SaludPage } from '../pages/salud/salud';
     HistoriaPage,
     DibujoPage,
     PyEPage,
-    SaludPage
+    SaludPage,
+    PApPsPage
   ],
   providers: [
     StatusBar,
