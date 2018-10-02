@@ -13,6 +13,7 @@ import { SaludPage } from '../pages/salud/salud';
 import { PApPsPage } from '../pages/p-ap-ps/p-ap-ps';
 import { ComPage } from '../pages/com/com';
 import { MiPage } from '../pages/mi/mi';
+import { RoboticaPage } from '../pages/robotica/robotica';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MiPage } from '../pages/mi/mi';
     SaludPage,
     PApPsPage,
     ComPage,
-    MiPage
+    MiPage,
+    RoboticaPage
   
   ],
   imports: [
@@ -41,7 +43,8 @@ import { MiPage } from '../pages/mi/mi';
     SaludPage,
     PApPsPage,
     ComPage,
-    MiPage
+    MiPage,
+    RoboticaPage
     
   ],
   providers: [
