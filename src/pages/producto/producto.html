@@ -1,0 +1,63 @@
+<!--
+  Generated template for the ProductoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{producto.Producto}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content padding>
+    <ion-col><img style = "height: 100px; width: 200 " [src] = producto.imagen ></ion-col>
+    <ion-card>
+      <ion-card-header>
+          <ion-row>
+              <ion-list>
+                  <ion-item>
+                    <ion-avatar item-start>
+                      <img src="../assets/imgs/HBarba.png">
+                    </ion-avatar>
+                    <h2>{{producto.Vendedor}}</h2>
+                  </ion-item>
+                </ion-list>
+           </ion-row> 
+      </ion-card-header>
+    
+      <ion-card-content>
+          <h2 ion-text color="primary">Precio:</h2>  <h2>{{producto.precio}}</h2>
+          <h2 ion-text color="primary">Telefono:</h2>  <h2>{{producto.numero}}</h2>
+          <h2 ion-text color="primary">Valoracion:</h2>
+          <ion-row>
+          <ion-icon name = "star" *ngFor="let s of producto.valoracion"></ion-icon>
+          </ion-row>
+          <h2 ion-text color="primary">Reseñas del producto:</h2>  <h2>{{numero}}</h2>
+          <ion-card *ngFor= "let r of producto.resena">
+              <ion-item>
+                <ion-avatar item-start>
+                  <img [src] = r.avatar>
+                </ion-avatar>
+                <h2>{{r.usuario}}</h2>
+                <p>{{r.fecha}}</p>
+              </ion-item>
+    
+            
+              <ion-card-content>
+                <p>{{r.texto}}</p>
+              </ion-card-content>
+            
+            </ion-card>
+      </ion-card-content>
+    
+    </ion-card>
+
+    <button (click)="clickCarrito()" ion-button color="secondary">Agregar Al Carrito</button>
+    
+  
+</ion-content>

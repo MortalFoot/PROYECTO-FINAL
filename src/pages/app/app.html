@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons start>
+          <button (click)="Carrito()" ion-button icon-only color="royal">
+              <ion-icon name="cart"></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-title>Trade-All.</ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only color="royal">
+          
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+
+<ion-content padding  style = "background-color: dimgray">
+    <ion-card style = "border-radius: 10ptx" *ngFor="let producto of Productos">
+        <ion-item [ngStyle]="{'background-color': producto.color}">
+          <ion-col item-start>
+            <img [src] = producto.imagen  (click)="clickProducto(producto)"/>
+          </ion-col>
+          <h2> {{producto.Producto}} </h2>
+          <p> {{producto.precio}} </p>
+        </ion-item>
+    </ion-card>
+
+</ion-content>

@@ -6,45 +6,42 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { HistoriaPage } from '../pages/historia/historia';
-import { DibujoPage } from '../pages/dibujo/dibujo';
-import { PyEPage } from '../pages/py-e/py-e';
-import { SaludPage } from '../pages/salud/salud';
-import { PApPsPage } from '../pages/p-ap-ps/p-ap-ps';
-import { ComPage } from '../pages/com/com';
-import { MiPage } from '../pages/mi/mi';
-import { RoboticaPage } from '../pages/robotica/robotica';
+import { NewPage } from '../pages/new/new';
+import { InicioPage } from '../pages/inicio/inicio';
+import { RegisterPage } from '../pages/register/register';
+import {IonicStorageModule} from "@ionic/storage";
+import { ProductoPage } from '../pages/producto/producto';
+import { RegPage } from '../pages/reg/reg';
+import { AppPage } from '../pages/app/app';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    HistoriaPage,
-    DibujoPage,
-    PyEPage,
-    SaludPage,
-    PApPsPage,
-    ComPage,
-    MiPage,
-    RoboticaPage
+    NewPage,
+    InicioPage,
+    RegisterPage,
+    ProductoPage,
+    RegPage,
+    AppPage
   
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    HistoriaPage,
-    DibujoPage,
-    PyEPage,
-    SaludPage,
-    PApPsPage,
-    ComPage,
-    MiPage,
-    RoboticaPage
+    NewPage,
+    InicioPage,
+    RegisterPage,
+    ProductoPage,
+    RegPage,
+    AppPage
+
     
   ],
   providers: [

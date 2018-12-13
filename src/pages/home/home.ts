@@ -1,60 +1,91 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { HistoriaPage } from '../historia/historia';
-import { DibujoPage } from '../dibujo/dibujo';
-import { PyEPage } from '../py-e/py-e';
-import { SaludPage } from '../salud/salud';
-import { PApPsPage } from '../p-ap-ps/p-ap-ps';
-import { ComPage } from '../com/com';
-import { MiPage } from '../mi/mi';
-import { RoboticaPage } from '../robotica/robotica';
+import { NavController, AlertController } from 'ionic-angular';
+import { RegisterPage } from '../register/register';
+import { NewPage } from '../new/new';
+import {Storage} from '@ionic/storage';
+import { ProductoPage } from '../producto/producto';
+import { AppPage } from '../app/app';
+
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
-Historia = HistoriaPage;
-Dibujo = DibujoPage;
-PyE = PyEPage;
-Salud = SaludPage;
-PAAPS = PApPsPage;
-COM = ComPage;
-MI = MiPage;
-Robotica = RoboticaPage;
-  constructor(public navCtrl: NavController) {
+ 
+
+  registro = RegisterPage;
+  alv = RegisterPage;
+  Mike = AppPage;
+
+
+  usuario = [];
+  usuarios = '';
+  password = '';
+  mail = '';
+
+  constructor(public navCtrl: NavController, public storage: Storage, public alertCtrl: AlertController
+    ) {
+
+     this.storage.keys()
+     .then(keys => {
+       if (keys.some(key => key == 'usuario')){
+
+        this.storage.get('usuario')
+        .then(usuario => {
+          console.log(usuario);
+          this.usuario = JSON.parse(usuario);
+          console.log(usuario);
+        }
+        );
+       }
+     });
+  // this.storage.clear();
+  }
+
+  clickRegistro(){
+    console.log(this.usuario);
+    this.navCtrl.push(this.registro, {usuarios: this.usuario});
+
+   
 
   }
-  clickHistoria()
-  {
-    this.navCtrl.push(this.Historia)
+
+  clickALV(){
+   
+    this.navCtrl.push(this.alv);
+
   }
-  clickDibujo()
-  {
-    this.navCtrl.push(this.Dibujo)
-  }
-  clickPyE()
-  {
-    this.navCtrl.push(this.PyE)
-  }
-  clickSalud()
-  {
-    this.navCtrl.push(this.Salud)
-  }
-  clickPPAPs()
-  {
-    this.navCtrl.push(this.PAAPS)
-  }
-  clickCOM()
-  {
-    this.navCtrl.push(this.COM)
-  }
-  clickMI()
-  {
-    this.navCtrl.push(this.MI)
-  }
-  clickRobo()
-  {
-    this.navCtrl.push(this.Robotica)
-  }
+
+  clickALV2(){
+
+   let index = this.usuario.findIndex(u => u.mail == this.mail && u.password == this.password);
+    
+   if(index >= 0){
+   const alert = this.alertCtrl.create({
+    title: 'Usuario encontrado',
+    subTitle: '',
+    buttons: ['OK']
+  })
+  alert.present();
+
+  this.navCtrl.push(this.Mike);
+
+  
+} 
+  
+else 
+{
+  const alert = this.alertCtrl.create({
+    title: 'Invalido',
+    subTitle: '',
+    buttons: ['OK']
+  })
+  alert.present();
 }
+
+  }
+
+}
+
+
